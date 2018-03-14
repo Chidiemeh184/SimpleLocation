@@ -13,6 +13,7 @@
 		EF199F9D20589B2200E53E51 /* SimpleLocation.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF199F9B20589B2200E53E51 /* SimpleLocation.xcdatamodeld */; };
 		EF199F9F20589B2200E53E51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF199F9E20589B2200E53E51 /* Assets.xcassets */; };
 		EF199FA220589B2200E53E51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF199FA020589B2200E53E51 /* LaunchScreen.storyboard */; };
+		EFA4521020591FA4009AA766 /* GeocodingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA4520F20591FA4009AA766 /* GeocodingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		EF199F9E20589B2200E53E51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF199FA120589B2200E53E51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF199FA320589B2200E53E51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFA4520F20591FA4009AA766 /* GeocodingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				EF199F9420589B2200E53E51 /* AppDelegate.swift */,
 				EF199F9620589B2200E53E51 /* ViewController.swift */,
+				EFA4520F20591FA4009AA766 /* GeocodingViewController.swift */,
 				EF199F9820589B2200E53E51 /* Main.storyboard */,
 				EF199F9E20589B2200E53E51 /* Assets.xcassets */,
 				EF199FA020589B2200E53E51 /* LaunchScreen.storyboard */,
@@ -100,6 +103,11 @@
 					EF199F9020589B2200E53E51 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -141,6 +149,7 @@
 			files = (
 				EF199F9720589B2200E53E51 /* ViewController.swift in Sources */,
 				EF199F9520589B2200E53E51 /* AppDelegate.swift in Sources */,
+				EFA4521020591FA4009AA766 /* GeocodingViewController.swift in Sources */,
 				EF199F9D20589B2200E53E51 /* SimpleLocation.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

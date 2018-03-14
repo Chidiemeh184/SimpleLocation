@@ -7,19 +7,58 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ViewController: UIViewController {
 
+    var locationManager : CLLocationManager?
+    var startLocation : CLLocation?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        locationManager = CLLocationManager()
+        locationManager?.delegate = self
+        locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+        //locationManager?.requestWhenInUseAuthorization()
+        locationManager?.requestAlwaysAuthorization()
+     
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+       
     }
-
 
 }
 
+
+extension ViewController : CLLocationManagerDelegate {
+    
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if startLocation == nil {
+            startLocation = locations.first
+            print("\(String(describing: startLocation))")
+        }else {
+            guard let latest = locations.first else { return }
+            let distanceInMeters = startLocation?.distance(from: latest)
+            print("distance in meters: \(String(describing: distanceInMeters))")
+        }
+    }
+    
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Error : \(error)")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse || status == .authorizedAlways {
+            //locationManager?.startUpdatingLocation()
+            locationManager?.requestLocation()
+            locationManager?.allowsBackgroundLocationUpdates = true
+        }
+    }
+    
+
+}
