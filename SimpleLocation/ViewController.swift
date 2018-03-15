@@ -35,7 +35,6 @@ class ViewController: UIViewController {
 
 extension ViewController : CLLocationManagerDelegate {
     
-    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if startLocation == nil {
             startLocation = locations.first
@@ -46,7 +45,6 @@ extension ViewController : CLLocationManagerDelegate {
             print("distance in meters: \(String(describing: distanceInMeters))")
         }
     }
-    
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Error : \(error)")
@@ -59,6 +57,5 @@ extension ViewController : CLLocationManagerDelegate {
             locationManager?.allowsBackgroundLocationUpdates = true
         }
     }
-    
 
 }
