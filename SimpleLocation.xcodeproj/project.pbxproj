@@ -18,6 +18,11 @@
 		EFA452142059673A009AA766 /* To Apple and Back.gpx in Resources */ = {isa = PBXBuildFile; fileRef = EFA452132059673A009AA766 /* To Apple and Back.gpx */; };
 		EFA45218205ACF36009AA766 /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA45217205ACF36009AA766 /* MapKitViewController.swift */; };
 		EFA4521F205ACFB0009AA766 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFA4521E205ACFB0009AA766 /* MapKit.framework */; };
+		EFA45225205AE87D009AA766 /* facebook.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFA45221205AE87D009AA766 /* facebook.jpg */; };
+		EFA45226205AE87D009AA766 /* apple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFA45222205AE87D009AA766 /* apple.jpg */; };
+		EFA45227205AE87D009AA766 /* headquarters.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFA45223205AE87D009AA766 /* headquarters.plist */; };
+		EFA45228205AE87D009AA766 /* google.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFA45224205AE87D009AA766 /* google.jpg */; };
+		EFA4522A205AE89B009AA766 /* AnnotationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA45229205AE89B009AA766 /* AnnotationsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +39,11 @@
 		EFA452132059673A009AA766 /* To Apple and Back.gpx */ = {isa = PBXFileReference; lastKnownFileType = text; path = "To Apple and Back.gpx"; sourceTree = "<group>"; };
 		EFA45217205ACF36009AA766 /* MapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
 		EFA4521E205ACFB0009AA766 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EFA45221205AE87D009AA766 /* facebook.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = facebook.jpg; path = "006_MapKitAndCoreLocation-Annotations-Resources/006_MapKitAndCoreLocation-Annotations-DemoStarter/AnnotationDemo/AnnotationDemo/facebook.jpg"; sourceTree = SOURCE_ROOT; };
+		EFA45222205AE87D009AA766 /* apple.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = apple.jpg; path = "006_MapKitAndCoreLocation-Annotations-Resources/006_MapKitAndCoreLocation-Annotations-DemoStarter/AnnotationDemo/AnnotationDemo/apple.jpg"; sourceTree = SOURCE_ROOT; };
+		EFA45223205AE87D009AA766 /* headquarters.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = headquarters.plist; path = SimpleLocation/headquarters.plist; sourceTree = SOURCE_ROOT; };
+		EFA45224205AE87D009AA766 /* google.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = google.jpg; path = "006_MapKitAndCoreLocation-Annotations-Resources/006_MapKitAndCoreLocation-Annotations-DemoStarter/AnnotationDemo/AnnotationDemo/google.jpg"; sourceTree = SOURCE_ROOT; };
+		EFA45229205AE89B009AA766 /* AnnotationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,15 +78,18 @@
 		EF199F9320589B2200E53E51 /* SimpleLocation */ = {
 			isa = PBXGroup;
 			children = (
+				EFA45220205AE864009AA766 /* Annotation Files */,
 				EF199F9420589B2200E53E51 /* AppDelegate.swift */,
 				EF199F9620589B2200E53E51 /* ViewController.swift */,
 				EFA4520F20591FA4009AA766 /* GeocodingViewController.swift */,
 				EFA4521120595FC9009AA766 /* RegionMonitoringViewController.swift */,
 				EFA45217205ACF36009AA766 /* MapKitViewController.swift */,
+				EFA45229205AE89B009AA766 /* AnnotationsViewController.swift */,
 				EF199F9820589B2200E53E51 /* Main.storyboard */,
 				EF199F9E20589B2200E53E51 /* Assets.xcassets */,
 				EF199FA020589B2200E53E51 /* LaunchScreen.storyboard */,
 				EF199FA320589B2200E53E51 /* Info.plist */,
+				EFA45223205AE87D009AA766 /* headquarters.plist */,
 				EF199F9B20589B2200E53E51 /* SimpleLocation.xcdatamodeld */,
 				EFA452132059673A009AA766 /* To Apple and Back.gpx */,
 			);
@@ -89,6 +102,16 @@
 				EFA4521E205ACFB0009AA766 /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EFA45220205AE864009AA766 /* Annotation Files */ = {
+			isa = PBXGroup;
+			children = (
+				EFA45222205AE87D009AA766 /* apple.jpg */,
+				EFA45221205AE87D009AA766 /* facebook.jpg */,
+				EFA45224205AE87D009AA766 /* google.jpg */,
+			);
+			path = "Annotation Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,9 +181,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFA45227205AE87D009AA766 /* headquarters.plist in Resources */,
 				EF199FA220589B2200E53E51 /* LaunchScreen.storyboard in Resources */,
 				EF199F9F20589B2200E53E51 /* Assets.xcassets in Resources */,
+				EFA45225205AE87D009AA766 /* facebook.jpg in Resources */,
 				EF199F9A20589B2200E53E51 /* Main.storyboard in Resources */,
+				EFA45226205AE87D009AA766 /* apple.jpg in Resources */,
+				EFA45228205AE87D009AA766 /* google.jpg in Resources */,
 				EFA452142059673A009AA766 /* To Apple and Back.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,6 +201,7 @@
 			files = (
 				EFA45218205ACF36009AA766 /* MapKitViewController.swift in Sources */,
 				EF199F9720589B2200E53E51 /* ViewController.swift in Sources */,
+				EFA4522A205AE89B009AA766 /* AnnotationsViewController.swift in Sources */,
 				EF199F9520589B2200E53E51 /* AppDelegate.swift in Sources */,
 				EFA4521220595FC9009AA766 /* RegionMonitoringViewController.swift in Sources */,
 				EFA4521020591FA4009AA766 /* GeocodingViewController.swift in Sources */,
